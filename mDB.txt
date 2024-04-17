@@ -1,0 +1,56 @@
+ayudi116 - paSBjpAs8fo65G5G - 49.43.115.25/32
+
+// PS -> PowerShell --> MongoDB powershell commands and terminal log
+PS D:\Install\mongosh> mongosh "mongodb+srv://cluster0.vy5yube.mongodb.net/" --apiVersion 1 --username ayudi116
+Enter password: ****************
+Current Mongosh Log ID: 660c643c2d16bc531b1e37d1
+Connecting to:          mongodb+srv://<credentials>@cluster0.vy5yube.mongodb.net/?appName=mongosh+2.0.0
+Using MongoDB:          7.0.7 (API Version 1)
+Using Mongosh:          2.0.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+Atlas atlas-wlrvoz-shard-0 [primary] test> use node-angular
+switched to db node-angular
+Atlas atlas-wlrvoz-shard-0 [primary] node-angular> help
+
+  Shell Help:
+
+    use                                        Set current database
+    show                                       'show databases'/'show dbs': Print a list of all available databases.
+                                               'show collections'/'show tables': Print a list of all collections for current database.
+                                               'show profile': Prints system.profile information.
+                                               'show users': Print a list of all users for current database.
+                                               'show roles': Print a list of all roles for current database.
+                                               'show log <type>': log for current connection, if type is not set uses 'global'
+                                               'show logs': Print all logs.
+    ...
+  For more information on usage: https://docs.mongodb.com/manual/reference/method
+Atlas atlas-wlrvoz-shard-0 [primary] node-angular> show collections
+posts
+Atlas atlas-wlrvoz-shard-0 [primary] node-angular> db .posts.find()
+[
+  {
+    _id: ObjectId("660c632d50180916a955f07e"),
+    title: 'New Post',
+    content: 'Content Added!!',
+    __v: 0
+  },
+  {
+    _id: ObjectId("660c691ae0413099d9767c82"),
+    title: 'New Post',
+    content: 'New Content!!',
+    __v: 0
+  },
+  {
+    _id: ObjectId("660c6c4ce0413099d9767ca9"),
+    title: 'Title',
+    content: 'Content 😊',
+    __v: 0
+  }
+]
+Atlas atlas-wlrvoz-shard-0 [primary] node-angular>

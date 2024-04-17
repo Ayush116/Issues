@@ -1,0 +1,18 @@
+I-N-I-T-I-T-A-L   F-I-L-E   I-N-F-O-R-M-A-T-I-O-N
+
+// import {} from 'somwhere'; --> way of importing in angular
+// const http = require('http'); --> way of importing in nodeJS
+const http = require('http');
+const app = require('./backend/app');
+
+const port = process.env.PORT || 3000;
+// // dummy server
+// const server = http.createServer((req, resp) => {
+//     resp.end("This is my first response.");
+// });
+
+app.set('port', port);
+const server = http.createServer(app);
+
+// server.listen(process.env.PORT || 3000); // for PROD env, whatever PORT is present there or 3000 [if not set]
+server.listen(port);
